@@ -6,5 +6,5 @@ module.exports.run = (args) => {
   }
 
   const variable = args[0];
-  return getValue(variable);
+  return getValue(variable) || "NULL";
 };

@@ -6,5 +6,5 @@ module.exports.run = (args) => {
   }
 
   const [value] = args;
-  return numEqualTo(value);
+  return numEqualTo(value) || "0";
 };
