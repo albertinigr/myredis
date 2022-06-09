@@ -58,7 +58,6 @@ const commitTransaction = () => {
   );
   stack.length = 0;
   stack.push(context);
-  console.log(stack);
   return currentContext();
 };
 

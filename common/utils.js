@@ -1,7 +1,7 @@
 const parseCommand = (line) => {
-  const result = line.split(" ");
+  const result = line.split(" ").map(str => str.trim().toLowerCase());
   return {
-    cmd: result[0].toLowerCase(),
+    cmd: result[0],
     args: result.splice(1),
   };
 };
