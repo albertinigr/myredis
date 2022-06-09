@@ -11,8 +11,6 @@ const currentContext = () => {
   return stack[stack.length - 1];
 };
 
-const exists = (variable, context) => Object.keys(context).includes(variable);
-
 const setValue = (variable, value) => {
   const context = currentContext();
   context[variable] = value;
