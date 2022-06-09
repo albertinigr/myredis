@@ -33,6 +33,35 @@ const getValue = (variable) => {
   return context[variable];
 };
 
+const beginTransaction = () => {
+  const context = { ...currentContext() };
+  stack.push(context);
+};
+
+const rollbackTransaction = () => {
+  if (stack.length == 1) {
+    return false;
+  }
+  return stack.pop();
+};
+
+const commitTransaction = () => {
+  if (stack.length <= 1) {
+    return false;
+  }
+  const context = stack.reduce(
+    (contextA, contextB) => ({
+      ...contextA,
+      ...contextB,
+    }),
+    0
+  );
+  stack.length = 0;
+  stack.push(context);
+  console.log(stack);
+  return currentContext();
+};
+
 const clear = () => init();
 
 module.exports = {
@@ -41,4 +70,7 @@ module.exports = {
   unsetVariable,
   numEqualTo,
   clear,
+  beginTransaction,
+  rollbackTransaction,
+  commitTransaction,
 };
