@@ -1,0 +1,29 @@
+{
+  "name": "myredis",
+  "version": "1.0.0",
+  "description": "A memory db",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "myredis": "bin/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertinigr/myredis.git"
+  },
+  "keywords": [
+    "cli",
+    "database"
+  ],
+  "author": "Alberto Gomez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertinigr/myredis/issues"
+  },
+  "homepage": "https://github.com/albertinigr/myredis#readme",
+  "dependencies": {
+    "yargs": "^17.5.1"
+  }
+}
