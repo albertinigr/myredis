@@ -22,8 +22,5 @@
   "bugs": {
     "url": "https://github.com/albertinigr/myredis/issues"
   },
-  "homepage": "https://github.com/albertinigr/myredis#readme",
-  "dependencies": {
-    "yargs": "^17.5.1"
-  }
+  "homepage": "https://github.com/albertinigr/myredis#readme"
 }
